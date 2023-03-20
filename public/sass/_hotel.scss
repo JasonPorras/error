@@ -1,0 +1,47 @@
+.tabs-container {
+  margin: 1rem;
+
+  &h2 {
+    font-weight: 300px;
+  }
+
+  & .tab-container {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    max-width: fit-content;
+
+    & .tab {
+      padding: 1rem 3rem 1rem 1rem;
+      margin: 0.2rem;
+      border: solid black 2px;
+      border-radius: 11px;
+    }
+
+    & .tab.active {
+      background-color: rgb(26, 25, 25);
+      color: white;
+    }
+  }
+
+  .data-container {
+    height: 65vh;
+    overflow-y: auto;
+    background-color: gray;
+  }
+
+  .data-container .data {
+    display: none;
+  }
+
+  .data-container .data.active {
+    display: block;
+  }
+}
+
+.rooms {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
